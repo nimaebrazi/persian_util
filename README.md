@@ -8,7 +8,7 @@ This library extend from:
 
 ## install via composer
 ```bash
-composer require nimaebrazi/persian_util
+composer require nimaebrazi/persian-util
 ```
 
 | Method Example |      output   |      Description   |
