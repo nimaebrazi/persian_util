@@ -7,8 +7,23 @@ This library extend from:
 [Jalali Date Format V2.65](http://jdf.scr.ir/)
 
 ## install via composer
-```bash
-composer require nimaebrazi/persian-util
+
+Add package to composer file:
+```javascrip
+"nimaebrazi/persian-util" : "dev-master"
+```
+and run:
+```
+composer update
+```
+
+If you need alias in laravel you can include it:
+```php
+'aliases' => [
+    ...
+    'JCal' => NimaEbrazi\PersianUtil\JalaliDate::class,
+    ...
+]
 ```
 
 | Method Example |      output   |      Description   |
