@@ -1165,25 +1165,38 @@ class JalaliDate
      * Fetch Jalali date from unix timestamp.
      *
      * @param int    $unixTimestamp
-     * @param string $splitter
+     * @param string $dateSplitter
+     * @param string $timeSplitter
      * @param string $timezone
      *
      * @return string
      */
-    public static function unixTimestampToJalali($unixTimestamp, $splitter = '/', $timezone = self::TEHRAN_TIMEZONE)
+    public static function unixTimestampToJalali($unixTimestamp, $dateSplitter = '/', $timeSplitter = ':', $timezone = self::TEHRAN_TIMEZONE)
     {
         $date = self::unixTimestampToStrFormat($unixTimestamp, $timezone);
 
         //fetch time and date from timestamp
         $gDate = explode(" ", $date)[0];
-
         //create year, month, day
         $gYear = explode("-", $gDate)[0];
         $gMonth = explode("-", $gDate)[1];
         $gDay = explode("-", $gDate)[2];
 
+        //create hour, minute, second
+        $time = explode(" ", $date)[1];
+        $hour = explode(":", $time)[0];
+        $minute = explode(":", $time)[1];
+        $second = explode(":", $time)[2];
+
         $jdate = self::gregorianToJalali($gYear, $gMonth, $gDay);
-        return (string)$jdate[0] . $splitter . $jdate[1] . $splitter . $jdate[2];
+
+        return
+            (string)$jdate[0] . $dateSplitter
+            . $jdate[1] . $dateSplitter
+            . $jdate[2] . ' '
+            . $hour . $timeSplitter
+            . $minute . $timeSplitter
+            . $second;
     }
 
     /**
