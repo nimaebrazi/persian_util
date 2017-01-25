@@ -34,6 +34,7 @@ composer require nimaebrazi/persian_util
 | ```isAfterToday('1395/11/2')```  | ('today is: 1395/12/1') false | Return bool  |
 | ```isBeforeToday('1395/11/2')``` | ('today is: 1395/12/1') true | Return bool |
 | ```isExpired('1395/11/2')``` | ('today is: 1395/12/1') true | Return bool |
-| ```gregorianToJalaliStrFormat(1485342613)``` | 1486984213 | Return (int) jalali time stamp |
+| - | - | - | - |
 | ```unixTimestampToJalali(1485342613)``` | 1395/11/6 | Return (string) jalali timestamp |
 | ```unixTimestampToStrFormat(1485342613)``` | 2017-01-25 14:40:13 | Return string of gregorian date with Asia/Tehran timezone |
+| ```gregorianToJalaliStrFormat(1485342613)``` | 1486984213 | Return (int) jalali time stamp |
