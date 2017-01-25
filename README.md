@@ -30,7 +30,6 @@ composer require nimaebrazi/persian_util
 | ```getYearWord(1395)``` | هزاروسیصدو نودوپنج | Return string of Jalali year |
 | ```getSeasonWord(10)``` | زمستان | Return string of Jalali season of month |
 | ```getDateWord('1395/2/15')``` | پانزده اردیبهشت هزار و سیصد و نود و پنج | Return string of Jalali date |
-
 | - | - | - | - |
 | ```isAfterToday('1395/11/2')```  | ('today is: 1395/12/1') false | Return bool  |
 | ```isBeforeToday('1395/11/2')``` | ('today is: 1395/12/1') true | Return bool |
