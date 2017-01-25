@@ -12,6 +12,11 @@
   "require": {
     "php": ">=5.3.0"
   },
+  "scripts": {
+    "dump-autoload": [
+      "composer dump-autoload"
+    ]
+  },
   "autoload": {
     "psr-4": {
       "NimaEbrazi\\PersianUtil\\": "src/"
