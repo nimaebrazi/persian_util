@@ -17,7 +17,7 @@ and run:
 composer update
 ```
 
-If you need alias in laravel you can include it:
+If you need alias in laravel you can include it in ```config/app.php```:
 ```php
 'aliases' => [
     ...
