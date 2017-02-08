@@ -1213,4 +1213,62 @@ class JalaliDate
         $dt->setTimeZone(new \DateTimeZone($timezone));
         return $dt->format('Y-m-d H:i:s');
     }
+
+    /**
+     * Make year by number range.
+     *
+     * @param $first
+     * @param $last
+     *
+     * @return array
+     */
+    public static function makeYear($first = 1300, $last = 1400)
+    {
+        return static::getNumberRange($first, $last);
+    }
+
+    /** Make days from 1 to 31 by default
+     *
+     * @param int $last
+     *
+     * @return array
+     */
+    public static function makeDays($last = 31)
+    {
+        return static::getNumberRange(1, $last);
+    }
+
+    /**
+     * Make persian month by name in array.
+     *
+     * @return array
+     */
+    public static function getPersianMonth()
+    {
+        $months = [];
+        $i = 1;
+        foreach (static::$persianMonth as $month) {
+            $months [$i] = $month;
+            $i++;
+        }
+
+        return $months;
+    }
+
+    /**
+     * Create an array of number by range.
+     *
+     * @param $first
+     * @param $last
+     *
+     * @return array
+     */
+    private static function getNumberRange($first, $last)
+    {
+        $all = [];
+        foreach (range($first, $last) as $index)
+            $all [] = $index;
+
+        return $all;
+    }
 }
