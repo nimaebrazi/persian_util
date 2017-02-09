@@ -8,8 +8,8 @@ This library extend from:
 
 ## install via composer
 
-```
 Run:
+
 ```
 composer require nimaebrazi/persian-util
 ```
