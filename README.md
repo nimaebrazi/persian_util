@@ -8,13 +8,10 @@ This library extend from:
 
 ## install via composer
 
-Add package to composer file:
-```javascrip
-"nimaebrazi/persian-util" : "dev-master"
 ```
-and run:
+Run:
 ```
-composer update
+composer require nimaebrazi/persian-util
 ```
 
 If you need alias in laravel you can include it in ```config/app.php```:
